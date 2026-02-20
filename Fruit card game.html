@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.card {
+  perspective: 1000px;
+  height: 120px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: steelblue;
+  color: white;
+}
+
+.card-back {
+  background: white;
+  transform: rotateY(180deg);
+}
+
+.matched .card-inner {
+  transform: rotateY(180deg);
+  cursor: default;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Score: <span id="score">0</span></h2>
+
+<div class="grid" id="grid"></div>
+
+<script>
+
+// 6 ผลไม้ → ทำซ้ำ 2 ชุด = 12 ใบ
+const fruits = ["🍎","🍌","🍉","🍇","🍓","🍍"];
+let cardsArray = [...fruits, ...fruits];
+
+// Shuffle (Fisher-Yates)
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+shuffle(cardsArray);
+
+const grid = document.getElementById("grid");
+let firstCard = null;
+let secondCard = null;
+let lockBoard = false;
+let score = 0;
+
+// สร้างการ์ด
+cardsArray.forEach(fruit => {
+
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  card.innerHTML = `
+    <div class="card-inner">
+      <div class="card-front">?</div>
+      <div class="card-back">${fruit}</div>
+    </div>
+  `;
+
+  card.addEventListener("click", () => {
+
+    if (lockBoard) return;
+    if (card.classList.contains("matched")) return;
+    if (card === firstCard) return;
+
+    card.classList.add("flip");
+
+    if (!firstCard) {
+      firstCard = card;
+      return;
+    }
+
+    secondCard = card;
+    lockBoard = true;
+
+    checkMatch();
+  });
+
+  grid.appendChild(card);
+});
+
+function checkMatch() {
+
+  const firstValue = firstCard.querySelector(".card-back").textContent;
+  const secondValue = secondCard.querySelector(".card-back").textContent;
+
+  if (firstValue === secondValue) {
+
+    firstCard.classList.add("matched");
+    secondCard.classList.add("matched");
+
+    score++;
+    document.getElementById("score").textContent = score;
+
+    resetTurn();
+
+  } else {
+
+    setTimeout(() => {
+      firstCard.classList.remove("flip");
+      secondCard.classList.remove("flip");
+      resetTurn();
+    }, 800);
+  }
+}
+
+function resetTurn() {
+  [firstCard, secondCard] = [null, null];
+  lockBoard = false;
+}
+
+</script>
+
+</body>
+</html>
