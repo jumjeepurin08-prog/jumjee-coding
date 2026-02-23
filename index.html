@@ -1,20 +1,276 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <script>
-            document.getElementsByClassName("box1") = function{ alert(`this is ${document.getElementsByClassName("box1").value}`)}
-        </script>
-    </head>
-    <body>
-        <div class="flip-container">
-            <div class="card-product">
-                <div class="front-prod">Product</div>
-                <div class="back-prod">transformer</div>
-            </div>
-            <div class="card-employment">
-                <div class="front-employ">employment</div>
-                <div class="back-employ">200 person</div>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaiPatanakit | ผู้ผลิตหม้อแปลงไฟฟ้าอันดับหนึ่งของไทย</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <a href="index.html" class="logo">ThaiPatanakit</a>
+                <div class="header-links">
+                    <a href="#" class="lang-link">TH</a>
+                    <span class="divider">|</span>
+                    <a href="#" class="lang-link">EN</a>
+                    <a href="tel:02-xxx-xxxx" class="contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        ติดต่อเรา
+                    </a>
+                </div>
             </div>
         </div>
-    </body>
+        <nav class="nav">
+            <div class="container nav-inner">
+                <button class="nav-toggle" aria-label="เมนู">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home">หน้าแรก</a></li>
+                    <li><a href="#about">เกี่ยวกับเรา</a></li>
+                    <li><a href="#products">ผลิตภัณฑ์</a></li>
+                    <li><a href="#services">บริการ</a></li>
+                    <li><a href="#quality">คุณภาพ</a></li>
+                    <li><a href="#reference">ลูกค้าของเรา</a></li>
+                    <li><a href="#news">ข่าวสาร</a></li>
+                    <li><a href="#career">สมัครงาน</a></li>
+                    <li><a href="#contact">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="transformer.png" alt="โรงงานอุตสาหกรรมไฟฟ้า" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content container">
+            <h1>ผู้ผลิตหม้อแปลงไฟฟ้าอันดับหนึ่งของไทย</h1>
+            <p class="hero-subtitle">ผลิต จำหน่าย ให้เช่า ซ่อม บำรุงรักษา หม้อแปลงไฟฟ้าแรงสูง แรงต่ำ ทุกชนิด</p>
+            <div class="hero-badges">
+                <span class="badge">มอก.384-2543</span>
+                <span class="badge">ISO 9001</span>
+                <span class="badge">KEMA Certified</span>
+            </div>
+            <a href="#products" class="btn btn-primary">ดูผลิตภัณฑ์</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="หม้อแปลงไฟฟ้า" loading="lazy">
+                    </div>
+                    <h3>ผลิตภัณฑ์</h3>
+                    <p>ผู้ผลิตหม้อแปลงไฟฟ้าแรงสูง แรงต่ำ คุณภาพสูง แบบ 1 เฟส และ 3 เฟส แบบแห้งและแบบระบายความร้อนด้วยน้ำมัน ตั้งแต่ขนาด 1 kVA ถึง 15,000 kVA</p>
+                    <a href="#products" class="feature-link">ดูผลิตภัณฑ์ทั้งหมด →</a>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="บริการซ่อมบำรุง" loading="lazy">
+                    </div>
+                    <h3>บริการ</h3>
+                    <p>ซ่อม ตรวจเช็ค ให้เช่า บำรุงรักษาหม้อแปลงไฟฟ้าทุกชนิด ทุกยี่ห้อ บริการ 24 ชม. กรองน้ำมัน เปลี่ยนถ่ายน้ำมัน มีหม้อแปลงให้เช่าทุกขนาด</p>
+                    <a href="#services" class="feature-link">ดูบริการทั้งหมด →</a>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="ลูกค้าอ้างอิง" loading="lazy">
+                    </div>
+                    <h3>ลูกค้าของเรา</h3>
+                    <p>ได้รับเลือกให้เป็นผู้ผลิตหม้อแปลงพิเศษ On Load Tap Changer ขนาด 12,500 kVA ให้กับมิตรผลกรุ๊ป</p>
+                    <a href="#reference" class="feature-link">ดูลูกค้าของเรา →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80" alt="บริษัทไทยพัฒนกิจหม้อแปลงไฟฟ้า" loading="lazy">
+                    <div class="about-badge">มากกว่า 50 ปี</div>
+                </div>
+                <div class="about-content">
+                    <h2>ThaiPatanakit Transformer</h2>
+                    <p class="about-lead">บริษัท ไทยพัฒนกิจหม้อแปลงไฟฟ้า จำกัด</p>
+                    <p>ผู้ผลิต จำหน่าย ให้เช่า ซ่อม บำรุงรักษา หม้อแปลงไฟฟ้าแรงสูง แรงต่ำ ทุกชนิด ควบคุมโดยวิศวกรและผู้ชำนาญงานมากว่า 50 ปี</p>
+                    <p>บริษัทเริ่มต้นกิจการในชื่อ หจก. สหพัฒนกิจ หม้อแปลงไฟฟ้า ต่อมาเมื่อธุรกิจเติบโตขึ้น ในปี พ.ศ. 2533 จึงได้เปลี่ยนชื่อเป็นบริษัทไทยพัฒนกิจหม้อแปลงไฟฟ้าจำกัด และเพิ่มทุนจดทะเบียนเป็น 70 ล้านบาท</p>
+                    <p>เรามุ่งมั่นผลิตหม้อแปลงไฟฟ้าคุณภาพดี ราคาไม่แพง และจัดส่งอย่างรวดเร็วให้กับผู้ใช้ไฟฟ้าทั้งภาคเอกชน หน่วยงานราชการ การไฟฟ้าส่วนภูมิภาคและการไฟฟ้านครหลวง</p>
+                    <a href="#contact" class="btn btn-outline">ติดต่อเรา</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>ผลิตภัณฑ์ของเรา</h2>
+                <p>หม้อแปลงไฟฟ้าคุณภาพสูง ตามมาตรฐานสากล</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="หม้อแปลงแบบแห้ง" loading="lazy">
+                    <h4>หม้อแปลงแบบแห้ง</h4>
+                    <p>Dry type transformer สำหรับการใช้งานในร่ม</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80" alt="หม้อแปลงแบบน้ำมัน" loading="lazy">
+                    <h4>หม้อแปลงแบบน้ำมัน</h4>
+                    <p>Oil-immersed transformer สำหรับการใช้งานกลางแจ้ง</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80" alt="หม้อแปลงพิเศษ" loading="lazy">
+                    <h4>หม้อแปลงพิเศษ</h4>
+                    <p>On Load Tap Changer และแบบอื่นๆ ตามสั่งทำ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header light">
+                <h2>บริการของเรา</h2>
+                <p>บริการครบวงจร สำหรับหม้อแปลงไฟฟ้าทุกชนิด</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">🔧</div>
+                    <h4>ซ่อมบำรุง</h4>
+                    <p>ซ่อม ตรวจเช็ค บำรุงรักษาหม้อแปลงไฟฟ้าทุกชนิด ทุกยี่ห้อ บริการ 24 ชม.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🔄</div>
+                    <h4>กรองน้ำมัน</h4>
+                    <p>กรองน้ำมัน เปลี่ยนถ่ายน้ำมันหม้อแปลงไฟฟ้า</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📋</div>
+                    <h4>ให้เช่า</h4>
+                    <p>มีหม้อแปลงให้ใช้แทนในขณะซ่อม และมีหม้อแปลงให้เช่าทุกขนาด</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📡</div>
+                    <h4>เทอร์โมสแกน</h4>
+                    <p>ตรวจเช็คความผิดปกติด้วยเครื่องเทอร์โมสแกน ตรวจเช็คฟรีตลอดอายุการใช้งาน</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Customers / Reference Section -->
+    <section id="reference" class="customers">
+        <div class="container">
+            <div class="section-header">
+                <h2>ลูกค้าของเรา</h2>
+                <p>Our Customers</p>
+            </div>
+            <div class="customer-logos">
+                <a href="https://www.mitrphol.com" target="_blank" rel="noopener noreferrer" class="customer-logo" title="น้ำตาลมิตรผล">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Mitr_Phol_Logo.png/250px-Mitr_Phol_Logo.png" alt="น้ำตาลมิตรผล" loading="lazy">
+                </a>
+                <a href="https://www.airportthai.co.th" target="_blank" rel="noopener noreferrer" class="customer-logo" title="การท่าอากาศยานแห่งประเทศไทย">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Airports_of_Thailand_Logo.svg/200px-Airports_of_Thailand_Logo.svg.png" alt="การท่าอากาศยานแห่งประเทศไทย" loading="lazy">
+                </a>
+                <a href="https://www.pttplc.com" target="_blank" rel="noopener noreferrer" class="customer-logo" title="ปตท.">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/PTT_Public_Company_logo.svg/200px-PTT_Public_Company_logo.svg.png" alt="ปตท." loading="lazy">
+                </a>
+                <a href="https://www.pea.co.th" target="_blank" rel="noopener noreferrer" class="customer-logo" title="การไฟฟ้าส่วนภูมิภาค">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Logo_of_the_Provincial_Electricity_Authority_of_Thailand.svg/200px-Logo_of_the_Provincial_Electricity_Authority_of_Thailand.svg.png" alt="การไฟฟ้าส่วนภูมิภาค" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Section -->
+    <section id="quality" class="quality">
+        <div class="container">
+            <div class="quality-content">
+                <h2>มาตรฐานคุณภาพ</h2>
+                <p>เราให้ความสำคัญกับคุณภาพเป็นอันดับแรก ทุกผลิตภัณฑ์ผ่านการรับรองมาตรฐานสากล</p>
+                <div class="cert-badges">
+                    <div class="cert-item">
+                        <span class="cert-label">มอก.384-2543</span>
+                        <span class="cert-desc">มาตรฐานผลิตภัณฑ์อุตสาหกรรม</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-label">ISO 9001</span>
+                        <span class="cert-desc">ระบบบริหารคุณภาพ</span>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-label">KEMA</span>
+                        <span class="cert-desc">รับรองโดยสถาบัน KEMA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>ติดต่อเรา</h2>
+                <p>พร้อมให้บริการและคำปรึกษา</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>บริษัท ไทยพัฒนกิจหม้อแปลงไฟฟ้า จำกัด</strong>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>ที่อยู่บริษัท</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <span>โทรศัพท์</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">ThaiPatanakit Transformer</div>
+                <nav class="footer-nav">
+                    <a href="#home">หน้าแรก</a>
+                    <a href="#about">เกี่ยวกับเรา</a>
+                    <a href="#products">ผลิตภัณฑ์</a>
+                    <a href="#services">บริการ</a>
+                    <a href="#quality">คุณภาพ</a>
+                    <a href="#reference">ลูกค้าของเรา</a>
+                    <a href="#news">ข่าวสาร</a>
+                    <a href="#career">สมัครงาน</a>
+                    <a href="#contact">ติดต่อเรา</a>
+                </nav>
+                <p class="copyright">© Copyright 2015 All Rights Reserved ThaiPatanakit Transformer Co.,Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
